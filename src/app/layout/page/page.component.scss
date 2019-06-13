@@ -1,0 +1,6 @@
+@import "../../../assets/sass/base/variables/all";
+
+:host {
+    display: block;
+    padding-top: $top-menu-height;
+}

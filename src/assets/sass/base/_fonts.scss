@@ -1,0 +1,43 @@
+/* Paths should start from styles.scss */
+
+// Regular
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/Raleway/Raleway-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/Raleway/Raleway-Italic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+// Light
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/Raleway/Raleway-Light.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/Raleway/Raleway-LightItalic.ttf') format('ttf');
+    font-weight: 300;
+    font-style: italic;
+}
+
+// Bold
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/Raleway/Raleway-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/Raleway/Raleway-BoldItalic.ttf') format('ttf');
+    font-weight: bold;
+    font-style: italic;
+}

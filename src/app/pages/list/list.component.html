@@ -1,0 +1,12 @@
+<div class="position-relative my-4" #scrollableContainer>
+    <div class="list-grid d-flex flex-wrap justify-content-between" #scrollableContent>
+        <div class="list-grid__item d-inline-block mb-3" *ngFor="let item of list;">
+
+            <div class="img-wrapper mx-auto" [ngStyle]="{ 'background-image': 'url(' + item.download_url + ')' }"></div>
+
+            <div class="text-center text-md-3 mt-1">
+                {{ item.author }}
+            </div>
+        </div>
+    </div>
+</div>

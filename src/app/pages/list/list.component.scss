@@ -1,0 +1,25 @@
+@import "../../../assets/sass/base/variables/all";
+
+$list-grid-width: 14rem;
+$list-grid-gutter: 1rem;
+
+.list-grid {
+    margin-left: - $list-grid-gutter / 2;
+    margin-right: - $list-grid-gutter / 2;
+
+    //max-height: 700px;
+    overflow-y: auto;
+}
+
+.list-grid__item {
+    width: $list-grid-width + $list-grid-gutter;
+}
+
+.img-wrapper {
+    width: $list-grid-width;
+    height: $list-grid-width;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid $gray-darker;
+}

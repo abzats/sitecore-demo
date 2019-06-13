@@ -1,0 +1,85 @@
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+
+.text-xs-1  {
+    @extend %text-xs-1;
+}
+.text-xs-2 {
+    @extend %text-xs-2;
+}
+
+.text-sm-1  {
+    @extend %text-sm-1;
+}
+.text-sm-2 {
+    @extend %text-sm-2;
+}
+
+.text-md-1 {
+    @extend %text-md-1;
+}
+.text-md-2 {
+    @extend %text-md-2;
+}
+.text-md-3 {
+    @extend %text-md-3;
+}
+
+.text-lg-1 {
+    @extend %text-lg-1;
+}
+.text-lg-2 {
+    @extend %text-lg-2;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+    @extend %headlinesFonts;
+    font-weight: normal;
+}
+h1, .h1 {
+    display: block;
+    line-height: 4rem;
+    font-size: $h1-font-size;
+}
+h2, .h2 {
+    font-weight: normal;
+    color: $brand-primary;
+    font-size: $h2-font-size;
+}
+
+.h-font {
+    @extend %headlinesFonts;
+}
+
+.default-font-family {
+    font-family: $font-family-base;
+}
+
+.text-black {
+    color: $black;
+}
+
+.text-sub-danger {
+    color: $brand-sub-danger;
+}
+
+.text-sub-success {
+    color: $brand-sub-success;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.strong {
+    font-weight: bold !important;
+}

@@ -1,0 +1,85 @@
+// Colors
+
+// Black and White
+$white:                 #ffffff;
+$black:                 #333333;
+
+// Gray color spectrum
+$gray-darkest:		    #4d4d4d;
+$gray-darker:		    #999999;
+$gray-dark:			    #cccccc;
+$gray: 				    #e6e6e6;
+$gray-light:		    #f2f2f2;
+$gray-lighter:		    #fafafa;
+
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// Brand color spectrum
+$brand-primary:         #824fd3;
+$brand-primary-2:         #944AC2;  // These brand-primary colors are used for dots
+$brand-primary-3:         #A544B1;
+$brand-primary-4:         #B73FA0;
+$brand-secondary:       $gray-darker;
+$brand-success:         #37af98;
+$brand-info:            #2EBAC7;
+$brand-warning:         #ea9642;
+$brand-danger:          #bc4850;
+$brand-inverse:         $gray-dark;
+
+$brand-sub-primary:     #9B6EE2;
+$brand-sub-primary-4:     #D96FC4;
+$brand-sub-success:     #40C0A7;
+$brand-sub-danger:     #D7636B;
+
+$brand-gradient:        linear-gradient(135deg, #8532C5, #9636B9 75%);
+$brand-gradient-secondary:        linear-gradient(135deg, #8532C5, #9636B9 75%);
+
+// Pure colors
+$main: 				$brand-primary;
+$main-light:        #A994E5;
+$main-lighter:		#d9c7ff;
+$main-dark:			#5c4d8a;
+$main-darker:       #222337;
+$main-bright:       $brand-primary-4;
+$green: 			$brand-success;
+$orange:			$brand-warning;
+$red: 				$brand-danger;
+$blue:              #222337;
+$blue-light:          #343543;
+$blue-light-transparent: rgba(52, 53, 67, .92);
+$blue-transparent-gradient: linear-gradient(to right, $blue-light, $blue-light-transparent);
+
+// Specific elements color vars
+$bg-navbar:             $black;
+$font-color-navbar:     $white;
+$bg-top-menu:           #e6e6e6;
+$bg-base:               $white;
+$divider-color:         #e6e6e6;
+$body-color:            $gray-darkest;
+$bg-scroll-bar-inner:   $brand-primary;
+$bg-scroll-bar-wrapper: #E8E8E8;
+$component-active-bg:   $brand-primary;
+$link-color:            $brand-primary;
+$link-hover-color:      $link-color;
+
+$theme-colors: (
+  primary: $brand-primary,
+  secondary:  $brand-secondary,
+  success: $brand-success,
+  info: $brand-info,
+  warning: $brand-warning,
+  danger: $brand-danger,
+  light: $gray-light,
+  dark: $gray-800
+);
+
+$darken-pct: 10%;
+$lighten-pct: 10%;
