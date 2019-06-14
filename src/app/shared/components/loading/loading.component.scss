@@ -1,0 +1,12 @@
+@import "../../../../assets/sass/base/variables/all";
+
+.loader__wrapper {
+    position: relative;
+    height: 4rem;
+    text-align: center;
+}
+
+.loader {
+    width: auto;
+    height: 100%;
+}

@@ -1,0 +1,42 @@
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-flex:               true;
+$enable-rounded:            true;
+$enable-shadows:            true;
+$enable-gradients:          true;
+$enable-transitions:        true;
+$enable-hover-media-query:  true;
+$enable-grid-classes:       true;
+$enable-print-styles:       true;
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$default-spacer: 1rem;
+$spacer: 3 * $default-spacer; // 3rem
+$spacers: (
+  0: 0,
+  1: ($default-spacer * .7),
+  2: ($default-spacer * 1.2),
+  3: ($default-spacer * 2),
+  4: $spacer,
+  5: ($default-spacer * 4)
+);
+
+$spacer-1: map-get($spacers , 1);
+$spacer-2: map-get($spacers , 2);
+$spacer-3: map-get($spacers , 3);
+$spacer-4: map-get($spacers , 4);
+$spacer-5: map-get($spacers , 5);
+
+$border-width: 1px;
+
+$border-radius: .1rem;
+$border-radius-lg: .1rem;
+$border-radius-sm: .1rem;

@@ -1,0 +1,61 @@
+<h1>
+    The technical exercise
+</h1>
+
+<h2 class="mt-3">
+    Summary
+</h2>
+
+<p class="text-md-3">
+    This is an Angular project created via Angular Cli. It uses all standard functionality including Lint validation and Unit tests.
+    <br />All requirements from the description of the exercise have been replied.
+</p>
+
+<h2 class="mt-3">
+    Intent
+</h2>
+<p class="text-md-3">
+    In this development, I tried to make a finished project ready to deploy. My main focus was on an overall overview with all design details, project structure, and scroll/pagination functionality.
+    <br />From a development process perspective, I decided to refuse using other common functionality (like e.g. translations, authentication, shared services with a state storing etc.) to avoid extending this task and be able to complete it at time.
+</p>
+
+<h2 class="mt-3">
+    Images source
+</h2>
+
+<p class="text-md-3">
+    I used https://picsum.photos/ as a source for images. It supports pagination as well.
+</p>
+
+
+<h2 class="mt-3">
+    Known issues
+</h2>
+<p class="text-md-3">
+    On certain view dimensions, you can see that full-width alignment of the latest row looks not appropriate.
+    <br />In the real application, I would suggest finding a proper way of using images (by changing the technical task), or either create an auto-alignment function where you will check the number of items fit the row and depends on this set row/column parameters. But it sounds quite "hacky", so I decided to follow the initial task and solve it with css.
+</p>
+<p class="text-md-3 mt-1">
+    Because of loading a lot of high-resolution images your browsers might lag and skip some animations.
+    <br />In the real application, I would suggest using minified images for the preview page.
+</p>
+
+<h2 class="mt-3">
+    Project structure
+</h2>
+<h3 class="mt-1">
+    assets/sass
+</h3>
+<p class="text-md-3">
+    I used bootstrap and common styles. All of them depend on a group of variables that can be included in components as well.
+</p>
+
+<h3 class="mt-1">
+    Entities
+</h3>
+<p class="text-md-3">
+    General structuring was done "by feature" with "shared" folder using. A good example of this is "pages/list".
+</p>
+
+
+

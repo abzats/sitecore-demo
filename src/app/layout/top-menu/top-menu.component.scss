@@ -1,0 +1,17 @@
+@import "../../../assets/sass/base/variables/all";
+
+:host {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: $top-menu-height;
+    background-color: $white;
+    box-shadow: $box-shadow-page-widget;
+    z-index: $zi-header;
+}
+
+.logo {
+    max-width: 13rem;
+}

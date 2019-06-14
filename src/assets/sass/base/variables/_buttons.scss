@@ -1,0 +1,60 @@
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-padding-x:                  2rem;
+$btn-padding-y:                  1.2rem;
+$btn-line-height:                1rem;
+$btn-font-weight:                300;
+$btn-font-size:                  1.4rem;
+$btn-box-shadow:                 none;
+$btn-active-box-shadow:          none;
+
+$btn-primary-color:              #fff;
+$btn-primary-bg:                 $brand-primary;
+$btn-primary-border:             $brand-primary;
+
+$btn-secondary-color:            $gray;
+$btn-secondary-bg:               #fff;
+$btn-secondary-border:           $gray-light;
+
+$btn-remove-color:               $brand-primary;
+$btn-remove-bg:                  transparent;
+$btn-remove-border:              transparent;
+
+$btn-info-color:                 #fff;
+$btn-info-bg:                    $brand-info;
+$btn-info-border:                $btn-info-bg;
+
+$btn-success-color:              #fff;
+$btn-success-bg:                 $brand-success;
+$btn-success-border:             $btn-success-bg;
+
+$btn-warning-color:              #fff;
+$btn-warning-bg:                 $brand-warning;
+$btn-warning-border:             $btn-warning-bg;
+
+$btn-danger-color:               #fff;
+$btn-danger-bg:                  $brand-danger;
+$btn-danger-border:              $btn-danger-bg;
+
+$btn-link-disabled-color:        $gray-light;
+
+$btn-padding-x-sm:               1rem;
+$btn-padding-y-sm:               0;
+
+$btn-padding-x-lg:               2.5em;
+$btn-padding-y-lg:               1rem;
+
+$btn-block-spacing-y:            1rem;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:              $border-radius;
+$btn-border-radius-lg:           $border-radius-lg;
+$btn-border-radius-sm:           $border-radius-sm;
+
+$btn-border-radius: .3rem;
+
+
+$input-btn-padding-y-lg: .8rem;
+$btn-border-radius-sm: $btn-border-radius;

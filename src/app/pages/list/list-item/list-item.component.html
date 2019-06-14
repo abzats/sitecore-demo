@@ -1,0 +1,11 @@
+<div class="item d-inline-block mb-3" *ngIf="item">
+    <div
+        class="img-wrapper mx-auto"
+        [ngStyle]="{ 'background-image': 'url(' + item.download_url + ')' }"
+        title="{{ item.author }}"
+    ></div>
+
+    <div class="author text-center text-md-3 mt-1 mx-auto">
+        {{ item.author }}
+    </div>
+</div>

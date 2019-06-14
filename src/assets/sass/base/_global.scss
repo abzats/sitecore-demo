@@ -1,0 +1,15 @@
+html {
+    font-size: 62.5%;
+    @media (min-width: $xxl) {
+        font-size: .7vw;
+    }
+}
+body {
+    position: relative;
+    width: 100vw;
+    min-width: 320px;
+    height: 100vh;
+    @media (min-width: $lg) {
+        background: $brand-gradient;
+    }
+}

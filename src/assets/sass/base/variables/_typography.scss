@@ -1,0 +1,122 @@
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif: 'Realway', sans-serif;
+$font-family-base:       $font-family-sans-serif;
+
+$font-family-montserrat: 'Raleway', Helvetica, Arial, sans-serif;
+// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+$font-size-root: 16px;
+
+$font-size-base:              1.6rem;
+$font-size-lg:                1.8rem;
+$font-size-md:                1.4rem;
+$font-size-sm:                1.2rem;
+$font-size-xs:                .8rem;
+
+$text-large-1-size:           1.8rem;
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$font-weight-base: $font-weight-normal;
+$line-height-base: 1.5;
+$line-height-sm: $line-height-base;
+$line-height-lg: $line-height-base;
+
+$h1-font-size:                2.4rem;
+$h2-font-size:                2.2rem;
+$h3-font-size:                1.8rem;
+$h4-font-size:                1.8rem;
+$h5-font-size:                1.8rem;
+$h6-font-size:                $font-size-base;
+
+
+
+$headings-margin-bottom: ($spacer / 2);
+$headings-font-family:   $font-family-montserrat;
+$headings-font-weight:   700;
+$headings-line-height:   1.2;
+$headings-color:         $black;
+
+$section-space: 2rem;
+$section-space-mobile: 2rem;
+$section-space-xl: 2rem;
+$section-space-xl-mobile: 2rem;
+$section-space-lg: 2rem;
+$section-space-lg-mobile: 2rem;
+
+$lead-font-size:   2rem;
+$lead-font-weight: 300;
+
+$small-font-size: 80%;
+
+$text-muted: $gray;
+
+$abbr-border-color: $gray-light;
+
+$blockquote-small-color:  $gray-light;
+$blockquote-font-size:    ($font-size-base * 1.25);
+$blockquote-border-color: $gray-lighter;
+$blockquote-border-width: .25rem;
+
+$mark-padding: .2em;
+
+$dt-font-weight: bold;
+
+$kbd-box-shadow:         inset 0 -.1rem 0 rgba(0,0,0,.25);
+$nested-kbd-font-weight: bold;
+
+$list-inline-padding: .4rem;
+
+/* Custom interfaces */
+// Common settings for headlines
+%headlinesFonts {
+    font-family: $font-family-montserrat;
+    font-weight: 500;
+}
+%text-xs-1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+%text-xs-2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+%text-sm-1 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+%text-sm-2 {
+    font-size: 1.4rem;
+    font-weight: normal;
+}
+%text-sm-3 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+%text-md-1 {
+    font-size: $font-size-base;
+    font-weight: bold;
+}
+%text-md-2 {
+    font-size: $font-size-base;
+    font-weight: normal;
+}
+%text-md-3 {
+    font-size: $font-size-base;
+    font-weight: 300;
+}
+%text-lg-1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+%text-lg-2 {
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+%text-lg-3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
