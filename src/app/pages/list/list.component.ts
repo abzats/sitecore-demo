@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { ListService, ImageInterface } from './list.service';
+import { ListService, ImageModel } from './list.service';
 import { BoolRef } from '../../shared/classes/bool-ref';
 
 @Component({
@@ -11,7 +11,7 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
 
     loading: BoolRef;
 
-    list: ImageInterface[];
+    list: ImageModel[];
 
     page: number;
     private _limit: number;
@@ -81,7 +81,6 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
             .subscribe(res => {
 
                 this.list = [...this.list, ...res];
-
 
                 if (this.list.length < 200) {
                     this.triggeredScrollEvent = false;

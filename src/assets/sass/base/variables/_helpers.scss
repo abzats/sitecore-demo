@@ -1,31 +1,19 @@
-// transitions
+// Transition
 $trans-default-suffix: .2s ease-in-out;
 
 $trans-text: all $trans-default-suffix;
 $trans-block: all .4s ease-in-out;
 $trans-block--big: all .6s ease-in-out;
 
-
-//// z-indexes
-//$zindex-dropdown:          1000 !default;
-//$zindex-sticky:            1020 !default;
-//$zindex-fixed:             1030 !default;
-//$zindex-modal-backdrop:    1040 !default;
-//$zindex-modal:             1050 !default;
-//$zindex-popover:           1060 !default;
-//$zindex-tooltip:           1070 !default;
-//
-//
-// box shadows
+// Box shadow
 $box-shadow-page-widget:                0 8px 20px rgba(0, 0, 0, .1);
 $box-shadow-card-widget-flat:           0 0 2px rgba(0, 0, 0, .15);
 $box-shadow-card-widget-button:         0 1px 2px rgba(0, 0, 0, .2);
 $box-shadow-popover:                    0 0 4px rgba(0,0,0,.2);
 $box-shadow-focus:                      0 0 0 9999px rgba(0, 0, 0, .6);
 $box-shadow-image-list:                 -1rem -2rem 1rem rgba(250, 250, 250, 1);
-//
-//
-// border radiuses
+
+// Border radius
 $border-radius-page:                        8px;
 $border-radius-widget:                      6px;
 $border-radius-widget-child:                2px;

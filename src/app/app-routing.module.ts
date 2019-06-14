@@ -6,18 +6,12 @@ import { DescriptionComponent } from './pages/description/description.component'
 const routes: Routes = [
     {
         path: 'list',
-        component: ListComponent,
-        data: {
-            title: 'list_title'
-        }
+        component: ListComponent
 
     },
     {
         path: 'description',
-        component: DescriptionComponent,
-        data: {
-            title: 'description_title'
-        }
+        component: DescriptionComponent
 
     },
     {

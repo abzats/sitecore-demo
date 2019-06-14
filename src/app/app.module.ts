@@ -6,16 +6,11 @@ import { AppComponent } from './app.component';
 import { TopMenuComponent } from './layout/top-menu/top-menu.component';
 import { PageComponent } from './layout/page/page.component';
 import { ListComponent } from './pages/list/list.component';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule } from '@angular/common/http';
 import { LoadingComponent } from './shared/components/loading/loading.component';
 import { DescriptionComponent } from './pages/description/description.component';
+import { ListItemComponent } from './pages/list/list-item/list-item.component';
 
-// AoT requires an exported function for factories
-export function HttpLoaderFactory(httpClient: HttpClient) {
-    return new TranslateHttpLoader(httpClient);
-}
 
 @NgModule({
     declarations: [
@@ -25,18 +20,12 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
         ListComponent,
         LoadingComponent,
         DescriptionComponent,
+        ListItemComponent,
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        }),
     ],
     providers: [],
     bootstrap: [AppComponent]

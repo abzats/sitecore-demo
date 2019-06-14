@@ -3,7 +3,7 @@ import { BoolRef } from '../../shared/classes/bool-ref';
 import { Observable } from 'rxjs';
 import { ApiService } from '../../shared/services/api/api.service';
 
-export interface ImageInterface {
+export interface ImageModel {
     id:           string;
     author:       string;
     width:        number;
@@ -28,7 +28,7 @@ export class ListService {
         private apiService: ApiService
     ) { }
 
-    getList(options: GetListRequest, loadingBool?: BoolRef): Observable<Array<ImageInterface>> {
+    getList(options: GetListRequest, loadingBool?: BoolRef): Observable<Array<ImageModel>> {
         return this.apiService.get(this.getListEndpoint, options, loadingBool);
     }
 }
