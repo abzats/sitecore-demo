@@ -1,13 +1,13 @@
-export class BoolRef {
+export class BoolRefClass {
 
     value: boolean;
 
     static get True() {
-        return new BoolRef(true);
+        return new BoolRefClass(true);
     }
 
     static get False() {
-        return new BoolRef(false);
+        return new BoolRefClass(false);
     }
 
     constructor(value: boolean) {

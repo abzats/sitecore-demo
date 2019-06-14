@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BoolRef } from '../../classes/bool-ref';
+import { BoolRefClass } from '../../classes/bool-ref.class';
 import { HttpClient } from '@angular/common/http';
 import { throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
@@ -16,7 +16,7 @@ export class ApiService {
     get(
         url: string,
         params?,
-        loadingBool?: BoolRef
+        loadingBool?: BoolRefClass
     ) {
         if (loadingBool) {
             loadingBool.value = true;
@@ -40,10 +40,13 @@ export class ApiService {
                     }
 
                     return response;
-                },
+                }),
                 catchError((e) => {
-                    loadingBool.value = false;
+                    if (loadingBool) {
+                        loadingBool.value = false;
+                    }
+
                     return throwError(e);
-                })));
+                }));
     }
 }

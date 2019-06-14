@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ListService, ImageModel } from './list.service';
-import { BoolRef } from '../../shared/classes/bool-ref';
+import { BoolRefClass } from '../../shared/classes/bool-ref.class';
 
 @Component({
     selector: 'app-list',
@@ -9,15 +9,16 @@ import { BoolRef } from '../../shared/classes/bool-ref';
 })
 export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
 
-    loading: BoolRef;
+    loading: BoolRefClass;
 
     list: ImageModel[];
 
     page: number;
+
     private _limit: number;
     private _listLimit: number;
 
-    private triggeredScrollEvent: boolean;
+    triggeredScrollEvent: boolean;
 
     @ViewChild('scrollableContainer', { static: false }) scrollableContainer: ElementRef;
     @ViewChild('scrollableContent', { static: false }) scrollableContent: ElementRef;
@@ -31,7 +32,7 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
         this.page = 0;
         this._limit = 40;
         this._listLimit = 200;
-        this.loading = BoolRef.True;
+        this.loading = BoolRefClass.True;
     }
 
     ngOnInit() {
@@ -39,7 +40,7 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     ngAfterViewInit() {
-        this.scrollFn = (event) => this._handleScroll();
+        this.scrollFn = (event) => this.handleScroll();
 
         this.scrollableContainer.nativeElement.addEventListener('scroll', this.scrollFn);
         this.scrollableContainer.nativeElement.addEventListener('resize', this.scrollFn);
@@ -50,7 +51,27 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
         window.removeEventListener('scroll', this.scrollFn);
     }
 
-    private _handleScroll() {
+    getData() {
+        this.page++;
+
+        this.listServise
+            .getList({
+                    page: this.page,
+                    limit: this._limit
+                },
+                this.loading)
+            .subscribe(res => {
+
+                this.list = [...this.list, ...res];
+
+                if (this.list.length < 200) {
+                    this.triggeredScrollEvent = false;
+                }
+            });
+
+    }
+
+    handleScroll() {
         if (!this.triggeredScrollEvent) {
 
             const container = this.scrollableContainer.nativeElement;
@@ -68,25 +89,4 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
 
         }
     }
-
-    private getData() {
-        this.page++;
-
-        this.listServise
-            .getList({
-                page: this.page,
-                limit: this._limit
-            },
-            this.loading)
-            .subscribe(res => {
-
-                this.list = [...this.list, ...res];
-
-                if (this.list.length < 200) {
-                    this.triggeredScrollEvent = false;
-                }
-            });
-
-    }
-
 }

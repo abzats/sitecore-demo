@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BoolRef } from '../../shared/classes/bool-ref';
+import { BoolRefClass } from '../../shared/classes/bool-ref.class';
 import { Observable } from 'rxjs';
 import { ApiService } from '../../shared/services/api/api.service';
 
@@ -28,7 +28,7 @@ export class ListService {
         private apiService: ApiService
     ) { }
 
-    getList(options: GetListRequest, loadingBool?: BoolRef): Observable<Array<ImageModel>> {
+    getList(options: GetListRequest, loadingBool?: BoolRefClass): Observable<Array<ImageModel>> {
         return this.apiService.get(this.getListEndpoint, options, loadingBool);
     }
 }
