@@ -1,8 +1,15 @@
 @import "../../../../assets/sass/base/variables/all";
 
+$loader-height: 4rem;
+
+:host {
+    display: block;
+    height: $loader-height;
+}
+
 .loader__wrapper {
     position: relative;
-    height: 4rem;
+    height: $loader-height;
     text-align: center;
 }
 
