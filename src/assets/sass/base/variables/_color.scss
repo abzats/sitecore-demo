@@ -37,9 +37,9 @@ $brand-inverse:         $gray-dark;
 $brand-sub-primary:     #9B6EE2;
 $brand-sub-primary-4:     #D96FC4;
 $brand-sub-success:     #40C0A7;
-$brand-sub-danger:     #D7636B;
+$brand-sub-danger:     #EE3424;
 
-$brand-gradient:        linear-gradient(135deg, #8532C5, #9636B9 75%);
+$brand-gradient:        linear-gradient(90deg, $brand-sub-danger, $brand-danger 75%);
 $brand-gradient-secondary:        linear-gradient(135deg, #8532C5, #9636B9 75%);
 
 // Pure colors
@@ -64,7 +64,7 @@ $bg-top-menu:           #e6e6e6;
 $bg-base:               $white;
 $divider-color:         #e6e6e6;
 $body-color:            $gray-darkest;
-$bg-scroll-bar-inner:   $brand-primary;
+$bg-scroll-bar-inner:   $brand-danger;
 $bg-scroll-bar-wrapper: #E8E8E8;
 $component-active-bg:   $brand-primary;
 $link-color:            $brand-primary;

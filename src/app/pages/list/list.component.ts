@@ -15,90 +15,77 @@ export class ListComponent implements OnInit, AfterViewInit, OnDestroy {
 
     page: number;
     private _limit: number;
+    private _listLimit: number;
 
-
-    private scrollElement: HTMLElement;
     private triggeredScrollEvent: boolean;
 
     @ViewChild('scrollableContainer', { static: false }) scrollableContainer: ElementRef;
     @ViewChild('scrollableContent', { static: false }) scrollableContent: ElementRef;
 
-    private containerSize: number;
-    private innerContentHeight: number;
-
     private scrollFn: EventListenerOrEventListenerObject;
-    private resizeFn: EventListenerOrEventListenerObject;
 
     constructor(
         private listServise: ListService
     ) {
         this.list = [];
         this.page = 0;
-        this._limit = 20;
+        this._limit = 40;
+        this._listLimit = 200;
         this.loading = BoolRef.True;
     }
 
     ngOnInit() {
-
-        this._getData();
+        this.getData();
     }
 
     ngAfterViewInit() {
         this.scrollFn = (event) => this._handleScroll();
 
-        // this.scrollElement = this.scrollableContainer.nativeElement;
-
-        window.addEventListener('scroll', this.scrollFn);
+        this.scrollableContainer.nativeElement.addEventListener('scroll', this.scrollFn);
+        this.scrollableContainer.nativeElement.addEventListener('resize', this.scrollFn);
     }
 
     ngOnDestroy(): void {
-        if (this.scrollElement) {
-            this.scrollElement.removeEventListener('resize', this.scrollFn);
-            this.scrollElement.removeEventListener('scroll', this.scrollFn);
-        }
-
-        window.removeEventListener('resize', this.resizeFn);
+        window.removeEventListener('resize', this.scrollFn);
         window.removeEventListener('scroll', this.scrollFn);
     }
 
     private _handleScroll() {
-        console.log('scroll');
-        // this._getData();
-
-
-        // this.scrollElement = this.scrollableContainer.nativeElement;
-
         if (!this.triggeredScrollEvent) {
 
-            /*let offset: number;
+            const container = this.scrollableContainer.nativeElement;
+            const content = this.scrollableContent.nativeElement;
 
-            offset = this.scrollElement.scrollTop;
+            if (container && content) {
 
-            const distanceFromBottom: number = Math.max(this.innerContentHeight - (offset + this.containerSize), 0);
+                const offset: number = Math.max(content.offsetHeight - container.offsetHeight - container.scrollTop, 0);
 
-            // TODO parameterize distance from bottom
-            if (distanceFromBottom < 100) {
-                this._getData();
-            }*/
+                if (offset < 350) {
+                    this.triggeredScrollEvent = true;
+                    this.getData();
+                }
+            }
 
         }
     }
 
-    private _getData() {
+    private getData() {
         this.page++;
 
         this.listServise
-            .getList(
-                {
-                    page: this.page,
-                    limit: this._limit
-                },
-                this.loading
-            )
+            .getList({
+                page: this.page,
+                limit: this._limit
+            },
+            this.loading)
             .subscribe(res => {
+
                 this.list = [...this.list, ...res];
-                this.triggeredScrollEvent = true;
-                this._handleScroll();
+
+
+                if (this.list.length < 200) {
+                    this.triggeredScrollEvent = false;
+                }
             });
 
     }

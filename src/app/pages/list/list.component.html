@@ -1,12 +1,30 @@
-<div class="position-relative my-4" #scrollableContainer>
-    <div class="list-grid d-flex flex-wrap justify-content-between" #scrollableContent>
+<div class="list-grid__wrapper" #scrollableContainer>
+
+    <div class="list-grid d-flex flex-wrap justify-content-between w-100" #scrollableContent>
+
         <div class="list-grid__item d-inline-block mb-3" *ngFor="let item of list;">
 
-            <div class="img-wrapper mx-auto" [ngStyle]="{ 'background-image': 'url(' + item.download_url + ')' }"></div>
+            <div
+                class="img-wrapper mx-auto"
+                [ngStyle]="{ 'background-image': 'url(' + item.download_url + ')' }"
+                title="{{ item.author }}"
+            ></div>
 
-            <div class="text-center text-md-3 mt-1">
+            <div class="author text-center text-md-3 mt-1 mx-auto">
                 {{ item.author }}
+            </div>
+        </div>
+
+        <div class="w-100 mt-2">
+            <app-loading [loading]="loading.value"></app-loading>
+
+            <div class="text-center mb-3" *ngIf="list?.length >= 200">
+                <button type="button" class="btn btn-primary text-md-1 px-4" (click)="getData()">
+                    {{ 'load_more_btn' | translate }}
+                </button>
             </div>
         </div>
     </div>
 </div>
+
+<div class="shadow-block"></div>

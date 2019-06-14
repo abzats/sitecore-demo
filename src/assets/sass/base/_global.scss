@@ -1,6 +1,5 @@
 html {
     font-size: 62.5%;
-    background-color: $gray-light;
     @media (min-width: $xxl) {
         font-size: .7vw;
     }
@@ -9,8 +8,8 @@ body {
     position: relative;
     width: 100vw;
     min-width: 320px;
-    min-height: 100vh;
+    height: 100vh;
     @media (min-width: $lg) {
-        @include scrollbar();
+        background: $brand-gradient;
     }
 }

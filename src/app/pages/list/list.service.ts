@@ -12,7 +12,7 @@ export interface ImageInterface {
     download_url: string;
 }
 
-export interface getListRequest {
+export interface GetListRequest {
     page:   number;
     limit:  number;
 }
@@ -28,7 +28,7 @@ export class ListService {
         private apiService: ApiService
     ) { }
 
-    getList(options: getListRequest, loadingBool?: BoolRef): Observable<Array<ImageInterface>> {
+    getList(options: GetListRequest, loadingBool?: BoolRef): Observable<Array<ImageInterface>> {
         return this.apiService.get(this.getListEndpoint, options, loadingBool);
     }
 }

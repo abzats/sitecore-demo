@@ -35,15 +35,15 @@ export class ApiService {
         return this.http.get(url, options)
             .pipe(
                 map((response: any) => {
-                        if (loadingBool) {
-                            loadingBool.value = false;
-                        }
-
-                        return response;
-                    },
-                    catchError((e) => {
+                    if (loadingBool) {
                         loadingBool.value = false;
-                        return throwError(e);
-                    })));
+                    }
+
+                    return response;
+                },
+                catchError((e) => {
+                    loadingBool.value = false;
+                    return throwError(e);
+                })));
     }
 }

@@ -9,6 +9,7 @@
     height: $top-menu-height;
     background-color: $white;
     box-shadow: $box-shadow-page-widget;
+    z-index: $zi-header;
 }
 
 .logo {

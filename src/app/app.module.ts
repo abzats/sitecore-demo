@@ -9,6 +9,8 @@ import { ListComponent } from './pages/list/list.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LoadingComponent } from './shared/components/loading/loading.component';
+import { DescriptionComponent } from './pages/description/description.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -21,6 +23,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
         TopMenuComponent,
         PageComponent,
         ListComponent,
+        LoadingComponent,
+        DescriptionComponent,
     ],
     imports: [
         BrowserModule,

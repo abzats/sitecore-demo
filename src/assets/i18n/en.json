@@ -1,3 +1,5 @@
 {
-    "list_title":             "Puzzle"
+    "list_title":             "Puzzle",
+    "description_title":      "What was done",
+    "load_more_btn":          "Load more"
 }
