@@ -11,10 +11,10 @@
 
 .list-grid {
     position: relative;
-    margin-left: - $list-grid-gutter / 2;
-    margin-right: - $list-grid-gutter / 2;
     @media (min-width: $lg) {
         width: 100%;
+        margin-left: - $list-grid-gutter / 2;
+        margin-right: - $list-grid-gutter / 2;
     }
 }
 
